@@ -63,7 +63,7 @@ export default {
         margin-right: 180px;
 
         @media screen and (max-width: 768px) {
-            margin-right: 100px;
+            margin-right: 50px;
         }
     }
 

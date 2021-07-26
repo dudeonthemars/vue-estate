@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <main-container>
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <FooterIcons/>
@@ -15,12 +15,12 @@
                     <FooterContacts />
                 </div>
             </div>
-        </main-container>
+        </div>
     </footer>
 </template>
 
 <script>
-import MainContainer from '@/components/MainContainer';
+
 import FooterIcons from '@/components/Footer/FooterIcons';
 import FooterNavigation from '@/components/Footer/FooterNavigation';
 import FooterClient from '@/components/Footer/FooterClient';
@@ -30,7 +30,6 @@ import {menuList, menuClient} from '@/constants/menuLinks';
 export default {
     name: 'Footer',
     components: {
-        MainContainer,
         FooterIcons,
         FooterNavigation,
         FooterClient,
@@ -50,7 +49,7 @@ export default {
     @use '@/assets/layouts/colors' as c;
 
     .footer {
-        background: c.$dark;
+        background: c.$primary;
         color: c.$white;
         font-family: f.$font-secondary;
         padding-bottom: 80px;
