@@ -20,23 +20,28 @@
             </div>
         </div>
         <Features :data="featuresData" />
+        <Properties :propertiesData="propertiesData" />
     </div>
 </template>
 
 <script>
-import {featuresData} from '@/data/data.features'
+import {featuresData, propertiesData} from '@/data/data.dummy';
+
 import Carousel from '@/components/Carousel';
 import Features from '@/components/Features';
+import Properties from '@/components/Properties';
 
 export default {
     name: 'Home',
     components: {
         Carousel,
-        Features
+        Features,
+        Properties
     },
     data() {
         return {
-            featuresData: featuresData
+            featuresData: featuresData,
+            propertiesData: propertiesData
         }
     }
 }
@@ -44,7 +49,7 @@ export default {
 <style lang="scss">
     @use '../assets/layouts/colors' as c;
     @use '../assets/layouts/fonts' as f;
-    .home {}
+    @use '../assets/layouts/typography' as t;
 
     .offering {
         padding: 120px 0;
@@ -63,10 +68,7 @@ export default {
         }
 
         &__text {
-            color: c.$text;
-            font-family: f.$font-secondary;
             padding-left: 20px;
         }
-
     }
 </style>
