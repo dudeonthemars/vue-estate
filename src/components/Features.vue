@@ -29,6 +29,7 @@ export default {
 <style scoped lang="scss">
     @use '../assets/layouts/colors' as c;
     @use '../assets/layouts/fonts' as f;
+
     .features {
         padding: 100px 0;
         background: c.$light;

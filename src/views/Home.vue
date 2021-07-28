@@ -21,6 +21,9 @@
         </div>
         <Features :data="featuresData" />
         <Properties :propertiesData="propertiesData" />
+        <div class="team">
+            <CarouselTeam />
+        </div>
     </div>
 </template>
 
@@ -30,13 +33,15 @@ import {featuresData, propertiesData} from '@/data/data.dummy';
 import Carousel from '@/components/Carousel';
 import Features from '@/components/Features';
 import Properties from '@/components/Properties';
+import CarouselTeam from '@/components/CarouselTeam';
 
 export default {
     name: 'Home',
     components: {
         Carousel,
         Features,
-        Properties
+        Properties,
+        CarouselTeam
     },
     data() {
         return {
@@ -49,7 +54,6 @@ export default {
 <style lang="scss">
     @use '../assets/layouts/colors' as c;
     @use '../assets/layouts/fonts' as f;
-    @use '../assets/layouts/typography' as t;
 
     .offering {
         padding: 120px 0;

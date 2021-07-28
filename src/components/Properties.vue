@@ -16,18 +16,23 @@
                 <div class="row">
                     <div class="col-md-4" v-for="property in propertiesData" :key="property.id">
                         <div class="properties__item">
-                            <img :src="require(`@/assets/images/${property.image}.png`)" :alt="property.title" class="properties__img">
-                            <h4 class="properties__text">{{property.title}}</h4>
-                            <p class="properties__sub">{{property.subtitle}}</p>
-                            <p class="properties__price">$ {{property.price}}</p>
-                            <ul class="properties__desc">
-                                <li class="properties__desc-item">{{property.desc.square}} Sq Ft</li>
-                                <li class="properties__desc-item">{{property.desc.rooms}} Bedrooms</li>
-                                <li class="properties__desc-item">{{property.desc.bath}} Bathroom</li>
-                            </ul>
+                            <a href="#" target="_blank" class="properties__link">
+                                <img :src="require(`@/assets/images/${property.image}.png`)" :alt="property.title" class="properties__img">
+                                <h4 class="properties__text">{{property.title}}</h4>
+                                <p class="properties__sub">{{property.subtitle}}</p>
+                                <p class="properties__price">$ {{property.price}}</p>
+                                <ul class="properties__desc">
+                                    <li class="properties__desc-item">{{property.desc.square}} Sq Ft</li>
+                                    <li class="properties__desc-item">{{property.desc.rooms}} Bedrooms</li>
+                                    <li class="properties__desc-item">{{property.desc.bath}} Bathroom</li>
+                                </ul>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger text-uppercase" type="button">All Properties</button>
             </div>
         </div>
     </div>
@@ -46,7 +51,6 @@ export default {
 </script>
 
 <style lang="scss">
-    @use '../assets/layouts/typography' as t;
     @use '../assets/layouts/colors' as c;
     @use '../assets/layouts/fonts' as f;
 
@@ -88,8 +92,11 @@ export default {
             font-size: 16px;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
+        }
 
-            
+        &__link {
+            color: inherit;
+            text-decoration: none;
         }
 
         &__desc {
